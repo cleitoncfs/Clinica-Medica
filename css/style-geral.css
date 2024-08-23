@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  main {
+    color: #0000008c;
+    margin-bottom: 60px;
+  }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .container-titulo {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .container-titulo h2, .container-titulo h3 {
+    margin:0;
+  }
+  
+  
+  /* Início CSS Topo */
+    .topo {
+      background-color: #00cad1;
+      width: 100%;
+    }
+    .topo .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 60px;
+      padding: 0 10px;
+      margin: 0 auto;
+    }
+  
+    .topo-titulo {
+      font-weight: 600;
+      font-size: 28px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .topo-titulo a {
+      display: flex;
+    }
+  
+    .topo-logo {
+      height: 60px;
+    }
+  
+    .topo-links{
+      display: flex;
+    }
+    .topo-link{
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+  
+    }
+    .topo-link:hover {
+      color: #004b4c;
+    }
+  
+    @media (max-width: 425px) {
+      .topo .container { flex-direction: column; }
+      .topo-titulo { margin: 10px 0; }
+      .topo-links { width: 100%; border-top: 1px solid #009fa5; justify-content: space-around;}
+    }
+  /* Fim CSS Topo */
+  
+  /* Estilos do Menu Hamburger */
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-hamburger-menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #00cad1;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .menu-hamburger-menu a {
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .menu-hamburger-menu a:hover {
+    color: #004b4c;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  @media (max-width: 768px) {
+    .topo-links {
+      display: none;
+    }
+  
+    .menu-hamburger {
+      display: flex;
+    }
+  
+    .menu-hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+  
+    .menu-hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  
+    .menu-hamburger-menu.active {
+      display: flex;
+    }
+  }
+  
+  /* Início CSS Rodapé */
+    footer {
+      background-color: #0d6e71;
+      color: #fff;
+      padding: 20px;
+    }
+    footer .container {
+      text-align: center;
+    }
+  /* Fim CSS Rodapé */
+
+  /* Estilo para o botão "Voltar ao Topo" */
+#btn-voltar-topo {
+    display: none; /* Ocultar o botão inicialmente */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #00cad1;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #btn-voltar-topo:hover {
+    background-color: #004b4c;
+    transform: scale(1.1);
+  }
+  
+  /* Tooltip para o botão */
+  #btn-voltar-topo::after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 101;
+  }
+
+  /* Ajuste para o tooltip não ultrapassar a margem direita */
+#btn-voltar-topo:hover::after {
+    display: block;
+    left: auto;
+    right: 0;
+    transform: translateX(-20%);
+  }
+  
+  #btn-voltar-topo:hover::after {
+    display: block;
+  }
+  
