@@ -151,9 +151,9 @@
     }
 
     footer a {
-      color: #4a90e2; /* Cor do link */
-      text-decoration: none; /* Remove o sublinhado por padrão */
-      transition: color 0.3s ease; /* Animação suave para o hover */
+      color: #4a90e2;
+      text-decoration: none;
+      transition: color 0.3s ease;
   }
   
   footer a:hover {
