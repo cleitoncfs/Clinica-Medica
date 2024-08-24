@@ -149,6 +149,18 @@
     footer .container {
       text-align: center;
     }
+
+    footer a {
+      color: #4a90e2; /* Cor do link */
+      text-decoration: none; /* Remove o sublinhado por padrão */
+      transition: color 0.3s ease; /* Animação suave para o hover */
+  }
+  
+  footer a:hover {
+      color: #357ab7; /* Tom mais escuro de azul para o efeito hover */
+      text-decoration: underline; /* Adiciona o sublinhado no hover */
+  }
+  
   /* Fim CSS Rodapé */
 
   /* Estilo para o botão "Voltar ao Topo" */
